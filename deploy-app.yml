@@ -1,0 +1,24 @@
+name : Deploy Infalens
+
+on:
+  workflow_run:
+    workflows: ["Docker Build and Push"]
+    types:
+      - completed
+    branches: [main]
+
+jobs:
+  deploy:
+    env:
+      DOCKER_USERNAME: ${{ vars.DOCKER_USERNAME }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker compose
+        uses: docker/setup-compose-action@v2
+
+      - name: Deploy to server
+        run: docker compose up -d --build
+
