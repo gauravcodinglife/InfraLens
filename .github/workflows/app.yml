@@ -11,8 +11,18 @@ jobs :
         - name : checkout code
           uses : actions/checkout@v4
 
-       # - name : login to dockerhub
-       #   uses : action/login-action@v3
+        - name : login to dockerhub
+          uses : action/login-action@v3
+          with :
+            username : ${{ vars.DOCKER_USERNAME }}
+            password : ${{ secrets.DOCKER_PASSWORD }}
+
+        - name : build and push docker hub image
+          uses : docker/build-push-action@v3
+          with :
+            context : .
+            push : true
+            tags : ${{ vars.DOCKER_USERNAME }}/infralens:latest
           
 
   
