@@ -2,7 +2,7 @@ name : Deploy Infalens
 
 on:
   workflow_run:
-    workflows: ["Docker Build and Push"]
+    workflows: ["infra"]
     types:
       - completed
     branches: [main]
