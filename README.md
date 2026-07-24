@@ -12,7 +12,7 @@
 
 **Know if your IaC change will break the business — before it merges.**
 
-InfraLens analyzes Terraform plans inside pull requests, scores the change for risk, and explains the business impact in plain English.
+InfraLens analyzes Terraform plans inside pull requests, scores the change for risk, and explains the business impact in plain English
 
 </div>
 
