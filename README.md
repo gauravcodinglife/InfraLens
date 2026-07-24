@@ -12,7 +12,7 @@
 
 **Know if your IaC change will break the business — before it merges.**
 
-InfraLens analyzes Terraform plans inside pull requests, scores the change for risk, and explains the business impact in plain English.
+InfraLens analyzes Terraform plans inside pull requests, scores the change for risk, and explains the business impact in plain English
 
 </div>
 
@@ -30,7 +30,7 @@ Terraform diffs are easy to read; their *consequences* are not. A three-line cha
 
 <img src=".github/readme/how-it-works.svg" alt="Pipeline: terraform plan, send to InfraLens, score and map context, PR comment" width="100%" />
 
-1. **Terraform Plan** — your existing CI job runs `terraform plan` as usual.
+1. **Terraform Plan** — your existing CI job runs `terraform plan` as usuals
 2. **Send to InfraLens** — the plan JSON is posted to the InfraLens API.
 3. **Score & Map Context** — changed resources are matched against risk rules and mapped to the business services they belong to.
 4. **PR Comment** — InfraLens posts a single comment with the risk score, affected services, and a plain-English explanation.
