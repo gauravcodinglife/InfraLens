@@ -1,9 +1,17 @@
-name: Deploy Infralens
+namediff --git a/deploy-app.yml b/deploy-app.yml
+index 1234567..89abcdef 100644
+--- a/deploy-app.yml
++++ b/deploy-app.yml
+@@ -1,7 +1,7 @@
+ name: Deploy Infralens
 
-on:
-  workflow_dispatch:
+ on:
+-  workflow_dispatch:
++  workflow_dispatch:
+     branches:
+       - main
 
-jobs:
+ jobs:
   deploy:
     runs-on: self-hosted
 
