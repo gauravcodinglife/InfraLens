@@ -1,4 +1,4 @@
-namediff --git a/deploy-app.yml b/deploy-app.yml
+diff --git a/deploy-app.yml b/deploy-app.yml
 index 1234567..89abcdef 100644
 --- a/deploy-app.yml
 +++ b/deploy-app.yml
@@ -27,4 +27,3 @@ index 1234567..89abcdef 100644
 
       - name: Deploy to server
         run: docker compose up -d --build --force-recreate
-
