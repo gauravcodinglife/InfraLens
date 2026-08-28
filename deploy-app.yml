@@ -1,24 +1,22 @@
-name : Deploy Infalens
+name: Deploy Infralens
 
 on:
-  workflow_run:
-    workflows: ["infra"]
-    types:
-      - completed
-    branches: [main]
+  workflow_dispatch:
 
 jobs:
   deploy:
+    runs-on: self-hosted
+
     env:
       DOCKER_USERNAME: ${{ vars.DOCKER_USERNAME }}
-    runs-on: self-hosted
+
     steps:
-      - name: checkout code
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Docker compose
+      - name: Set up Docker Compose
         uses: docker/setup-compose-action@v2
 
       - name: Deploy to server
-        run: docker compose up -d --build  --force-recreate
+        run: docker compose up -d --build --force-recreate
 
