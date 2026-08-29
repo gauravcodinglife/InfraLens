@@ -1,12 +1,9 @@
- name: Deploy Infralens
+name: Deploy Infralens
 
- on:
--  workflow_dispatch:
-+  workflow_dispatch:
-     branches:
-       - main
+on:
+  workflow_dispatch:
 
- jobs:
+jobs:
   deploy:
     runs-on: self-hosted
 
