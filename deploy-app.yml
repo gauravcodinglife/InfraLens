@@ -1,8 +1,3 @@
-diff --git a/deploy-app.yml b/deploy-app.yml
-index 1234567..89abcdef 100644
---- a/deploy-app.yml
-+++ b/deploy-app.yml
-@@ -1,7 +1,7 @@
  name: Deploy Infralens
 
  on:
